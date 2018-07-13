@@ -1,0 +1,57 @@
+$inputShadow:3px 3px 10px rgba(0, 0, 0, 0.07);
+.start_block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .start_description_elm {
+        flex: 0 1 auto;
+        max-width: 65%;
+    }
+    .start_text_elm {
+        max-width: 65%;
+        font-size: 16px;
+        p {
+            font-size: 24px;
+        }
+    }
+    .start_authorization_block {
+        flex: 0 1 auto;
+        max-width: 35%;
+        form {
+            div {
+                input {
+                    border-radius: 1.25rem;
+                    box-shadow: $inputShadow;
+                    border: 1px solid #ffffff;
+                }
+            }
+            .regulations{
+                input{
+                margin-top: 0.2rem;
+
+                }
+                font-size: 13px;
+            }
+            button{
+                border-radius: 1.25rem;
+            }
+        }
+        
+    }
+    @media (max-width: 992px) {
+        flex-direction: column;
+        .start_description_elm {
+            max-width: 100%;
+        }
+        .start_text_elm {
+            max-width: 100%;
+        }
+        .start_authorization_block {
+            min-width: 100%;
+            & form .regulations {
+                font-size: 0.8em;
+            }
+        }
+    }
+}

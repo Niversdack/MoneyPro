@@ -1,0 +1,119 @@
+body {
+    position: relative;
+    color: #2e3a66;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('fonts/sf-ui-display-bold-webfont.woff2') format('woff2'), url('fonts/sf-ui-display-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('fonts/sf-ui-display-semibold-welkListbfont.woff2') format('woff2'), url('fonts/sf-ui-display-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('fonts/sf-ui-display-medium-webfont.woff2') format('woff2'), url('fonts/sf-ui-display-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('fonts/sf-ui-display-regular-webfont.woff2') format('woff2'), url('fonts/sf-ui-display-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('fonts/sf-ui-display-light-webfont.woff2') format('woff2'), url('fonts/sf-ui-display-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF UI Text';
+    src: url('fonts/sf-ui-display-thin-webfont.woff2') format('woff2'), url('fonts/sf-ui-display-thin-webfont.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+* {
+    font-family: 'SF UI Text', 'Helvetica Neue', 'Open Sans', 'Roboto', Arial, sans-serif;
+}
+$headerShadow:0 0 10px rgba(0,0,0,0.07);
+header {
+    .navbar-brand {
+        font-size: 28px;
+        color: #2e3a66;
+    }
+    ul li a {
+        font-size: 18px;
+        color: #2e3a66;
+    }
+    margin-bottom: 2em;
+    box-shadow: $headerShadow;
+}
+
+.header_block {
+    max-height: 100px;
+    height: 100px;
+    background: white;
+    @media (min-width: 992px) {
+        display: flex;
+        align-items: center;
+    }
+    div {
+        background-color: #fff;
+    }
+    .header_nav_elm {
+        background-color: white;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            flex: 0 0 50%;
+        }
+        #navbarToggler {
+            background: white;
+            width: 100%;
+            ul {
+                width: 100%;
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                justify-content: flex-end;
+            }
+            flex:0 0 40%;
+        }
+    }
+    @media (max-width: 992px) {
+        max-height: 60px;
+        margin-bottom: 2em;
+        .container {
+            box-shadow: $headerShadow;
+        }
+        .header_nav_elm {
+            #navbarToggler {
+                width: 100%;
+                min-height: 100%;
+                ul {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    max-width: 100%;
+                    background-color: #fff;
+                }
+                flex:none;
+            }
+        }
+    }
+}
