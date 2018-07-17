@@ -1,4 +1,7 @@
 {
-
-    
+    "liveServer.settings.proxy": {
+        "enable": true,                             //   i. enabled
+        "baseUri": "/",                             //  ii. workspace
+        "proxyUri": "http://localhost:8081/moneypro" // iii. actual address
+    }
 }
