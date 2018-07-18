@@ -18,13 +18,7 @@
 
 <body>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="scripts/main.js"></script>
+
 
     <header class="header_block ">
         <div class="container ">
@@ -32,11 +26,12 @@
 
                 <a class="navbar-brand" href="#">MoneyPro</a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02"
+                <button class="navbar-toggler" onclick="changeIcon()" id="drag" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02"
                     aria-expanded="false" aria-label="Toggle navigation">
-                    Хуй
+                    <img id="menu" src="content/img/if_Menu.svg" alt="">
+                    <img id="close" hidden src="content/img/if_Close.svg" alt="">
                 </button>
-
+                
                 <div class="collapse navbar-collapse" id="navbarToggler">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
@@ -91,7 +86,8 @@
                             </svg>
                         </span>
                         <span>С
-                            <a href="#">правилами</a> сервиса ознакомился и согласен</span>
+                            <a href="#">правилами</a> сервиса
+                            <span class="random">ознакомился и</span> согласен</span>
                     </label>
                 </div>
                 <div class="buttons_block">
@@ -238,5 +234,27 @@
         </ul>
     </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="scripts/main.js"></script>
+<script>
+</script>
+<script type="text/javascript">
+                    
+    function changeIcon() {
+        if (document.getElementById("menu").hasAttribute("hidden")==false){
+            document.getElementById("menu").setAttribute("hidden","");
+            document.getElementById("close").removeAttribute("hidden");
+        } else {
+            document.getElementById("close").setAttribute("hidden","");
+            document.getElementById("menu").removeAttribute("hidden");
+        }
 
+        console.log(document.getElementById("menu").hasAttribute("hidden"));
+    }
+</script>
 </html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru-Ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MoneyPro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="content/header.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="content/start_block.css" />
+</head>
+
+<body>
+
+    
+
+    <header class="header_block ">
+        <div class="container ">
+            <nav class="navbar navbar-expand-lg  header_nav_elm">
+
+                <a class="navbar-brand" href="#">MoneyPro</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <img class="imgMid" src="content/img/if_Menu.svg" alt="">
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Главная
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Принцип работы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Последние выплаты</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <div class="container start_block">
+        <div class="container start_description_elm">
+            <div class="start_text_elm">
+                <p>Добро пожаловать на MoneyPro</p>
+                MoneyPro - Это азартная игра, в которой выможете выиграть реальные деньги. Выберите шанс победы и начните игру!
+            </div>
+
+        </div>
+        <div class="images">
+            <img class="imgMid" src="content/img/coin.svg" alt="">
+            <img class="imgSmal" src="content/img/coin.svg" alt="">
+            <img class="imgBig" src="content/img/coin.svg" alt="">
+
+        </div>
+
+        <div class="container start_authorization_block">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputLogin1" placeholder="Логин">
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-Mail">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+                </div>
+                <div class="form-check regulations">
+                    <input class="inp-cbx" id="cbx" type="checkbox" style="display: none;">
+                    <label class="form-check-label cbx" for="cbx">
+                        <span>
+                            <svg width="12px" height="10px" viewBox="0 0 12 10">
+                                <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+                            </svg>
+                        </span>
+                        <span>С
+                            <a href="#">правилами</a> сервиса
+                            <span class="random">ознакомился и</span> согласен</span>
+                    </label>
+                </div>
+                <div class="buttons_block">
+
+                </div>
+                <div class="buttons">
+                    <a href="#">Уже зарегестрированы?</a>
+                    <button type="submit" class="btn btn-primary">Создать аккаунт</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="table_block container">
+        <div class="table_navigator_elm">
+            <nav class="navbar navbar-light">
+                <a class="navbar-brand" href="#">Принцип работы</a>
+            </nav>
+        </div>
+        <div class=" work_result_elm">
+            <p>Перед каждой игрой генерирутеся строка алгоритмом SHA-512 в которой содержится соль и победное число (от 0 до
+                999999). Можно сказать, что перед Вами зашифрованный исход данной игры. Метод гарантирует 100% честность,
+                так как результат игры Вы видите заранее, а при изменении победного числа приведет к изменению Hash.</p>
+            <p>
+                Проверяйте самостоятельно:
+                <ul>
+                    <li>Скоприруйте Hash до начала игры</li>
+                    <li>После окончания нажмите «Проверить игру»</li>
+                    <li>Откроется окно с результатом</li>
+                    <li>Скопируйте вручную поля c Победным числом</li>
+                    <li>Вставьте в любой независимый SHA-512 генератор</li>
+                    <li>Hash должен совпадать c Hash до начала игры</li>
+                </ul>
+            </p>
+            <p>
+                Например:
+                <ul>
+                    <li>Hash до начала игры: <span class="chisla">9008354d492a2678fb81a33464a06f06ab6639998d4be7864d04acf3d72921962ad42fd86a9b5d985abe607de4de1cfcef526eefd1ab0e5de6bba6b69b6813e4</span></li>
+                    <li>Победное число: 366209</li>
+                    <li>После окончания нажали на «Проверить игру», открылось окно</li>
+                    <li>Копируем значения Победного числа</li>
+                    <li>Получаем строку 366209</li>
+                    <li>Вставляем строку в генератор</li>
+                    <li>Получили hash как и до начала игры</li>
+                </ul>
+            </p></div>
+    </div>
+    <footer class="footer_start_block container">
+        <a href="#">MoneyPro — 2018</a>
+        <ul>
+            <li>Группа ВКонтакте</li>
+            <li>Пользовательское соглашение</li>
+            <li>Правила сервиса</li>
+        </ul>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="scripts/main.js"></script>
+</html>
