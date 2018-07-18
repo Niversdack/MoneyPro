@@ -149,4 +149,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="scripts/main.js"></script>
+    <script type="text/javascript">
+                    
+        function changeIcon() {
+            if (document.getElementById("menu").hasAttribute("hidden")==false){
+                document.getElementById("menu").setAttribute("hidden","");
+                document.getElementById("close").removeAttribute("hidden");
+            } else {
+                document.getElementById("close").setAttribute("hidden","");
+                document.getElementById("menu").removeAttribute("hidden");
+            }
+    
+            console.log(document.getElementById("menu").hasAttribute("hidden"));
+        }
+    </script>
 </html>

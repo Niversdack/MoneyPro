@@ -231,8 +231,8 @@ $inputShadow:3px 3px 10px rgba(0, 0, 0, 0.07);
     .work_result_elm {
         padding: 1em 2em;
         font-size: 16px;
-        word-wrap: break-word; 
-        p{
+        word-wrap: break-word;
+        p {
             word-wrap: break-word;
         }
         ul {
@@ -250,6 +250,34 @@ $inputShadow:3px 3px 10px rgba(0, 0, 0, 0.07);
         .chisla {
             word-wrap: break-word;
             font-size: 12px;
+        }
+    }
+}
+
+.game {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    .game_block {
+        flex: 0 0 40%;
+        .bonus_block {
+            nav {
+                a {
+                    font-size: 18px;
+                }
+                .bonus_navbar {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .game_table_block {
+        flex: 0 0 60%;
+        .game_table {
+            overflow-y: scroll;
         }
     }
 }
