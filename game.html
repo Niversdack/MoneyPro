@@ -57,35 +57,41 @@
     <div class="game container">
         <div class="game_block">
             <div class="bonus_block">
-                <nav class="navbar navbar-light">
-                    <a class="navbar-brand">1231 S</a>
-                    <div class="bonus_navbar">
-                        <a class="navbar-brand" href="#">Пополнить</a>
-                        <a class="navbar-brand" href="#">Вывести</a>
-                        <a class="navbar-brand" href="#">Промокод</a>
-                    </div>
-                    
-                </nav>
+                <div class="bonus_nav">
+                    <nav class="navbar navbar-light">
+                        <a class="navbar-brand">1231 S</a>
+                        <div class="bonus_navbar">
+                            <a class="navbar-brand" href="#">Пополнить</a>
+                            <a class="navbar-brand" href="#">Вывести</a>
+                            <a class="navbar-brand" href="#">Промокод</a>
+                        </div>
 
-                <div class="bonus_block">
-                    <span>
+                    </nav>
+                </div>
+
+
+                <div class="bonus container">
+                    <p>
                         Бонус
-                    </span>
+                    </p>
                     <ul>
                         <li>Подпишись на наш паблик</li>
                         <li>Введи ссылку на страницу для проверки</li>
                     </ul>
-                    <input type="text" />
-                    <button type="submit">Забрать бонусы</button>
+                    <input type="text" class="form-control" placeholder="Ссылка на страницу">
+                    <div>
+                        <button type="submit" class="btn btn-primary">Забрать бонусы</button>
+
+                    </div>
                 </div>
             </div>
-            <div class="rate_block">
-                <span>
+            <div class="rate_block container">
+                <p>
                     Ставки
-                </span>
+                </p>
                 <div class="rate_summ">
                     <div class="summa">
-
+                        <input type="text" class="form-control" placeholder="Сумма">
                     </div>
                     <div class="chance_block">
                         <span>
@@ -98,22 +104,22 @@
                     </div>
                 </div>
                 <div class="chtoto">
-
+                    <input type="range" class="form-control">
                 </div>
                 <div class="win">
                     <span>
                         Расчетный выигрыш:
                     </span>
                     <span class="money">
-
+                        123 S
                     </span>
 
                 </div>
                 <div class="rate_button">
-                    <button type="submit">0-672099</button>
-                    <button type="submit">327900-999999</button>
+                    <button type="submit" class="btn btn-primary">0-672099</button>
+                    <button type="submit" class="btn btn-primary">327900-999999</button>
                 </div>
-                <a href="#">Включить автоклик</a>
+                <a class="autoclick" href="#">Включить автоклик</a>
             </div>
 
 
@@ -122,7 +128,7 @@
             <div class="game_table_navigator_elm">
                 <nav class="navbar navbar-light">
                     <a class="navbar-brand" href="#">Последние игры</a>
-
+                    <span> Таблица обнавляется автоматически</span>
                 </nav>
             </div>
             <div class="game_table">

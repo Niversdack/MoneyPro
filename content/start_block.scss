@@ -1,4 +1,6 @@
-$inputShadow:3px 3px 10px rgba(0, 0, 0, 0.07);
+$inputShadow:0 4px 11px rgba(0, 0, 0, 0.04);
+$boxShadow: 0 4px 11px rgba(0, 0, 0, 0.04);
+$buttonShadow: 0 4px 11px rgba(47,102,249, 0.31);
 .start_block {
     display: flex;
     flex-direction: row;
@@ -258,26 +260,166 @@ $inputShadow:3px 3px 10px rgba(0, 0, 0, 0.07);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 100%;
+    justify-content: space-between;
     .game_block {
         flex: 0 0 40%;
         .bonus_block {
-            nav {
-                a {
+            .bonus_nav {
+                padding-bottom: 1.5em;
+                nav {
+                    border-radius: 11px;
+                    height: 76px;
+                    box-shadow: $boxShadow;
+                    a {
+                        font-size: 18px;
+                    }
+                    .bonus_navbar {
+                        a {
+                            color: #2e3a66;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .bonus {
+                padding-left: 1.5em;
+                padding-right: 1.5em;
+                box-shadow: $boxShadow;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 3em;
+                max-height: 266px;
+                border-radius: 11px;
+                p {
+                    padding-top: 1em;
                     font-size: 18px;
                 }
-                .bonus_navbar {
-                    a {
-                        font-size: 14px;
+                ul {
+                    padding-left: 1em;
+                    font-size: 16px;
+                    list-style: decimal;
+                }
+                input {
+                    font-size: 12px;
+                    border-radius: 1.3rem;
+                    height: 43px;
+                    box-shadow: $inputShadow;
+                    border-color: white;
+                }
+                div {
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 100%;
+                    padding: 1.5em 0 0 0;
+                    height: 43px;
+                    button {
+                        box-shadow: $buttonShadow;
+                        height: 43px;
+                        width: 40%;
+                        border-radius: 1.3rem;
                     }
                 }
             }
         }
+        .rate_block {
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            margin-top: 1.5em;
+            box-shadow: $boxShadow;
+            display: flex;
+            flex-direction: column;
+            max-height: 346px;
+            border-radius: 11px;
+            p {
+                padding-top: 1em;
+                font-size: 18px;
+            }
+            .rate_summ {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                .summa {
+                    width: 50%;
+                    input {
+                        box-shadow: $inputShadow;
+                        border-color: white;
+                        border-radius: 1.4rem;
+                        font-size: 12px;
+                        height: 42px;
+                    }
+                }
+                .chance_block {
+                    width: 50%;
+                    display: flex;
+                    justify-content: space-around;
+                    span {}
+                    .chance {}
+                }
+            }
+            .chtoto {
+                padding: 1em 0;
+            }
+            .win {
+                span {
+                    font-size: 12px;
+                }
+                .money {
+                    padding-left: 1em;
+                    font-size: 18px;
+                }
+            }
+            .rate_button {
+                padding-top: 1.5em;
+                display: flex;
+                justify-content: space-around;
+                button {
+                    box-shadow: $buttonShadow;
+                    font-size: 13px;
+                    flex: 0 0 47%;
+                    border-radius: 1.4em;
+                    height: 43px;
+                }
+            }
+            .autoclick {
+                padding: 2em 0 1em;
+                display: flex;
+                justify-content: center;
+                color: #B7BECC;
+            }
+        }
     }
     .game_table_block {
+        padding: 0 0 0 3em;
+        height: 76px;
         flex: 0 0 60%;
+        
+        .game_table_navigator_elm {
+            height: 76px;
+            nav {
+                height: 76px;
+                border-radius: 11px;
+                box-shadow:$boxShadow;
+            }
+            
+        }
         .game_table {
-            overflow-y: scroll;
+            padding-top: 1em;
+            table {
+                thead,
+                tbody {
+                    th {
+                        border: 1px solid transparent;
+                    }
+                    tr,
+                    td {
+                        border: 1px solid transparent;
+                    }
+                }
+                border-spacing: 0;
+                border-color: transparent;
+                font-size: 16px;
+            }
         }
     }
 }

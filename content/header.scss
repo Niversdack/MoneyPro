@@ -49,10 +49,7 @@ body {
     font-family: 'SF UI Text', 'Helvetica Neue', 'Open Sans', 'Roboto', Arial, sans-serif;
 }
 
-$headerShadow:0 0 10px rgba(0,
-0,
-0,
-0.07);
+$headerShadow:0 4px 10px rgba(0,0,0,0.03);
 header {
     .navbar-brand {
         font-size: 28px;
