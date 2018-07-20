@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="powerange/powerange.min.css" />
+    <link rel="stylesheet" href="content/asRange.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="content/header.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="content/start_block.css" />
 </head>
@@ -106,7 +106,7 @@
                     </div>
                 </div>
                 <div class="chtoto">
-                    <input type="text" class="form-control ranger">
+                    <input type="range" class="ranger">
                 </div>
                 <div class="win">
                     <span>
@@ -271,7 +271,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 <script src="scripts/main.js"></script>
-<script src="powerange/powerange.min.js"></script>
+<script src="scripts/jquery-asRange.min.js"></script>
 <script type="text/javascript">
     function changeIcon() {
         if (document.getElementById("menu").hasAttribute("hidden") == false) {
@@ -285,22 +285,40 @@
         console.log(document.getElementById("menu").hasAttribute("hidden"));
     }
 </script>
-<script>
-    var elem = document.querySelector('#ranger');
-    var init = new Powerange(elem);
-    defaults = {
-        callback: function () {},
-        decimal: false,
-        disable: false,
-        disableOpacity: .5,
-        hideRange: false,
-        klass: '',
-        min: 0,
+<script type="text/javascript">
+    $(".ranger").asRange({
+        // namespace
+        namespace: 'asRange',
+        // requires additional skin file
+        skin: null,
+        // max value
         max: 100,
-        start: null,
-        step: null,
-        vertical: false
-    };
+        // min value
+        min: 0,
+        // initial value
+        value: null,
+        // moving step at a time
+        step: 1,
+        // limit the range of the pointer moving
+        limit: false,
+        // initial range
+        range: false,
+        // 'v' or 'h'
+        direction: 'h',
+        // enable keyboard interactions
+        keyboard: true,
+        // false, 'inherit', {'inherit': 'default'}
+        replaceFirst: false,
+        // shows tips
+        tip: false,
+        // shows scales
+        scale: true,
+        // for formatting output
+        format: function format(value) {
+            return value;
+        }
+
+    });
 </script>
 
 </html>

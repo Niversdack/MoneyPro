@@ -359,6 +359,29 @@ $buttonShadow: 0 4px 11px rgba(47,102,249, 0.31);
             }
             .chtoto {
                 padding: 1em 0;
+                .asRange{
+                    width: 100%;
+                    background: #F0EEEE;
+                    height: 14px;
+                    .asRange-pointer{
+                        width: 16px;
+                        height: 16px;
+                    }
+                    .asRange-pointer::before{
+                        top: -2px;
+                        right: -2px;
+                        bottom: -2px;
+                        left: -2px;
+                        background: #2F66F9;
+                        box-shadow: 0 2px 7px rgba(47,102,249,0.19);
+                    }
+                    .asRange-selected{
+                        height: 14px;
+                        background: linear-gradient(#6272ff, #72a8ff);
+                        border-radius: 1em 0 0 1em;
+                    }
+                    
+                }
             }
             .win {
                 span {
