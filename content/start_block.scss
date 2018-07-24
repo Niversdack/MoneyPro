@@ -211,6 +211,7 @@ body {
             tbody {
                 th {
                     border: 1px solid transparent;
+                    font-weight: inherit;
                 }
                 tr,
                 td {
@@ -478,8 +479,12 @@ body {
     }
     .game_table_block {
         padding: 0 0 0 3em;
-        height: 76px;
+        
         flex: 0 0 60%;
+        @media (max-width: 992px) {
+            padding: 0;
+            flex: 0 0 100%;
+        }
         .game_table_navigator_elm {
             height: 76px;
             nav {
@@ -490,8 +495,16 @@ body {
                     color: #2e3a66;
                 }
                 span {
+                    
                     opacity: 0.4;
+                    @media (max-width: 992px) {
+                        position: absolute;
+                        opacity: 0;
+                    }
                 }
+                
+                    
+                
             }
         }
         .game_table {
@@ -500,7 +513,9 @@ body {
                 thead,
                 tbody {
                     th {
+                        
                         border: 1px solid transparent;
+                        font-weight: inherit;
                     }
                     tr,
                     td {
@@ -510,6 +525,15 @@ body {
                 border-spacing: 0;
                 border-color: transparent;
                 font-size: 16px;
+                width: 100%;
+                
+            }
+            
+        }
+        @media (max-width: 992px) {
+            .game_table {
+                white-space: nowrap;
+                overflow-y: scroll;
             }
         }
     }

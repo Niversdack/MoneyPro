@@ -1,7 +1,8 @@
 body {
     position: relative;
+   
     color: #2e3a66;
-    background-color: #FCFCFC
+    background-color: #FCFCFC;
 }
 
 @font-face {
@@ -68,6 +69,7 @@ header {
     max-height: 100px;
     height: 100px;
     background: white;
+    z-index: 10px;
     @media (min-width: 992px) {
         display: flex;
         align-items: center;
@@ -78,6 +80,7 @@ header {
     .header_nav_elm {
         background-color: white;
         height: 100%;
+        z-index: 10;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -104,6 +107,7 @@ header {
             box-shadow: $headerShadow;
         }
         .header_nav_elm {
+            z-index: 10;
             #navbarToggler {
                 width: 100%;
                 min-height: 100%;
