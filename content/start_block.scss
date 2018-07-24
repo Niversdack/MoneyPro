@@ -1,6 +1,10 @@
 $inputShadow:0 4px 11px rgba(0, 0, 0, 0.04);
 $boxShadow: 0 4px 11px rgba(0, 0, 0, 0.04);
-$buttonShadow: 0 4px 11px rgba(47,102,249, 0.31);
+$buttonShadow: 0 4px 11px rgba(47, 102, 249, 0.31);
+body {
+    background: #FcFcFc;
+}
+
 .start_block {
     display: flex;
     flex-direction: row;
@@ -190,6 +194,10 @@ $buttonShadow: 0 4px 11px rgba(47,102,249, 0.31);
                 font-size: 16px;
                 color: #2e3a66;
             }
+            .active {
+                border-bottom: solid 1px;
+                border-bottom-color: #2e3a66;
+            }
             a:hover {
                 border-bottom: solid 1px;
                 border-bottom-color: #2e3a66;
@@ -261,12 +269,31 @@ $buttonShadow: 0 4px 11px rgba(47,102,249, 0.31);
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
     .game_block {
         flex: 0 0 40%;
         .bonus_block {
             .bonus_nav {
                 padding-bottom: 1.5em;
                 nav {
+                    @media (max-width: 992px) {
+                        height: 103px;
+                        flex-wrap: nowrap;
+                        justify-content: space-between;
+                        a {
+                            flex: 0 0 50%;
+                        }
+                        .bonus_navbar {
+                            flex: 0 0 50%;
+                            opacity: 0.4;
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-direction: column;
+                            align-items: flex-end;
+                        }
+                    }
                     border-radius: 11px;
                     height: 76px;
                     box-shadow: $boxShadow;
@@ -312,7 +339,15 @@ $buttonShadow: 0 4px 11px rgba(47,102,249, 0.31);
                     width: 100%;
                     padding: 1.5em 0 0 0;
                     height: 43px;
+                    @media (max-width: 992px) {
+
+                        justify-content: center;
+                        
+                    }
                     button {
+                        @media (max-width: 992px) {
+                            width: 100%;
+                        }
                         box-shadow: $buttonShadow;
                         height: 43px;
                         width: 40%;
@@ -339,6 +374,7 @@ $buttonShadow: 0 4px 11px rgba(47,102,249, 0.31);
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                
                 .summa {
                     width: 50%;
                     input {
@@ -355,41 +391,61 @@ $buttonShadow: 0 4px 11px rgba(47,102,249, 0.31);
                     justify-content: space-around;
                     span {}
                     .chance {}
+                    
                 }
+                @media (max-width: 992px) {
+                    justify-content: center;
+                    flex-direction: column;
+                    .summa{
+                        width: 100%;
+                        padding-bottom: 1.5em;
+                    }
+                    .chance_block{
+                        width: 100%;
+                        padding-bottom: 1.5em;
+                    }
+                }
+                
             }
             .chtoto {
                 padding: 1em 0;
-                .asRange{
+                .asRange {
                     width: 100%;
                     background: #F0EEEE;
                     height: 14px;
-                    .asRange-pointer{
+                    .asRange-pointer {
                         width: 16px;
                         height: 16px;
                     }
-                    .asRange-pointer::before{
+                    .asRange-pointer::before {
                         top: -2px;
                         right: -2px;
                         bottom: -2px;
                         left: -2px;
                         background: #2F66F9;
-                        box-shadow: 0 2px 7px rgba(47,102,249,0.19);
+                        box-shadow: 0 2px 7px rgba(47, 102, 249, 0.19);
                     }
-                    .asRange-selected{
+                    .asRange-selected {
                         height: 14px;
                         background: linear-gradient(#6272ff, #72a8ff);
                         border-radius: 1em 0 0 1em;
                     }
-                    
                 }
             }
             .win {
+                
                 span {
                     font-size: 12px;
                 }
                 .money {
                     padding-left: 1em;
                     font-size: 18px;
+                }
+                @media (max-width: 992px) {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 1em;
                 }
             }
             .rate_button {
@@ -402,6 +458,14 @@ $buttonShadow: 0 4px 11px rgba(47,102,249, 0.31);
                     flex: 0 0 47%;
                     border-radius: 1.4em;
                     height: 43px;
+                }
+                @media (max-width: 992px) {
+                    justify-content: center;
+                    flex-direction: column;
+                    button{
+                        flex: 0 0 100%;
+                        margin-bottom: 1em;
+                    }
                 }
             }
             .autoclick {
@@ -416,15 +480,19 @@ $buttonShadow: 0 4px 11px rgba(47,102,249, 0.31);
         padding: 0 0 0 3em;
         height: 76px;
         flex: 0 0 60%;
-        
         .game_table_navigator_elm {
             height: 76px;
             nav {
                 height: 76px;
                 border-radius: 11px;
-                box-shadow:$boxShadow;
+                box-shadow: $boxShadow;
+                a {
+                    color: #2e3a66;
+                }
+                span {
+                    opacity: 0.4;
+                }
             }
-            
         }
         .game_table {
             padding-top: 1em;
